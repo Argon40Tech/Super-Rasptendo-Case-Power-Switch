@@ -39,7 +39,7 @@ Incidentally it can also be used to "wake" the Pi from halt/shutdown state. The 
 ## Installation
 (**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports.
 It's very important to follow the right pin configuration to prevent damage to your Pi.
-If you haven't, you can follow the instructions here [here.](http://www.argon40.com/resources/setting-up-your-rasptendo-case/))
+If you haven't, you can follow the instructions [here.](http://www.argon40.com/resources/setting-up-your-rasptendo-case/))
 
 This instruction is a *step-by-step guide* to install necessary software for your **RASPTENDO Case**.
 You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
@@ -54,7 +54,7 @@ The script will automatically install pertinent files and configure your Raspber
 Installation will automatically reboot once all processes are completed.
 
 ### Testing the buttons
-After rebooting, your **RASPTENDO Case Buttons** are now fully functional. To test if your buttons work, try holding the **POWER button**. The status LED should start blinking and if you held the button for 2 seconds, your Raspberry Pi should shutdown. To "wake" it up, you can press the **POWER button** again.
+After rebooting, your **RASPTENDO Case Buttons** are now fully functional. To test if your buttons work, try holding the **POWER button**. The status LED should start blinking and if you held the button for a second, your Raspberry Pi should shutdown. To "wake" it up, you can press the **POWER button** again.
 
 ----------
 
@@ -68,11 +68,11 @@ In your terminal, type:
 ```bash
 $ sudo nano /boot/config.txt
 ```
-Check if UART is already enabled by searching for a line at the end of the config.txt with
+Check if UART is already enabled by searching for a line at the ```config.txt``` with
 ```
 enable_uart=1
 ```
-if it's not, add that line at the bottom. Save the file by typing CTRL + X, then Enter.
+if it's not, add that line at the bottom. Save the file by typing CTRL + X, hit Y, then Enter.
 
 #### Step 2 - Update your repository
 Type
@@ -124,7 +124,7 @@ $ sudo reboot
 ```
 
 ### Testing the buttons
-After rebooting, your **RASPTENDO Case Buttons** are now fully functional. To test if your buttons work, try holding the **POWER button**. The status LED should start blinking and if you held the button for 2 seconds, your Raspberry Pi should shutdown. To "wake" it up, you can press the **POWER button** again.
+After rebooting, your **RASPTENDO Case Buttons** are now fully functional. To test if your buttons work, try holding the **POWER button**. The status LED should start blinking and if you held the button for a second, your Raspberry Pi should shutdown. To "wake" it up, you can press the **POWER button** again.
 
 ## Notes
 <a id="note1" href="#note1">[1]</a>: [Wake from halt](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=24682 "raspberrypi.org")
