@@ -19,6 +19,26 @@ The **RASPTENDO RESET button** works by forcing a restart of your Raspberry pi 3
 
 Incidentally it can also be used to "wake" the Pi from halt/shutdown state. The **RASPTENDO RESET button** should only be used when really necessary (e.g. *your pi freezed*), as it may corrupt your SD card if the OS is writing on it when you trigger the switch.
 
+<table>
+<tr><th>POWER Button</th><th>RESET Button</th></tr>
+<tr><td>
+      
+| Current State | Action             | Function               | 
+|---------------|--------------------|------------------------|
+| ON            | long press         | soft shutdown          |
+| ON            | short press (<1 s) | nothing                |
+| SLEEP         | short/long press   | wakes Pi               |
+
+</td><td>
+
+| Current State | Action             | Function               |
+|---------------|--------------------|------------------------|
+| ON            | short/long press   | hard reboot            |
+| SLEEP         | short/long press   | wakes Pi               |
+
+</td></tr> </table>
+
+
 ## Prerequisites
 1. RetroPie
 
@@ -116,7 +136,7 @@ add the following command,
 ```
 sudo python3 /opt/Rasptendo/halt_wake.py
 ```
-Save the file by typing CTRL + X, then Enter.
+Save the file by typing CTRL + X, hit Y, then Enter.
 
 #### Step 6 - Reboot to apply changes
 ```bash
