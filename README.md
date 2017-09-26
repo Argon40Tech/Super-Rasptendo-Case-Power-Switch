@@ -17,7 +17,7 @@ The jumper wires of the **RASPTENDO POWER button** must be connected to *GPIO03 
 
 The **RASPTENDO RESET button** works by forcing a restart of your Raspberry pi 3 at any given time. The jumper wires of the **RASPTENDO RESET button** is to be soldered to the *P6 Pins*, which is labeled *RUN* on your Raspberry pi 3 Board, to issue a hardware reset<a href="#note2"><sup>[2]</sup></a>.
 
-Incidentally it can also be used to "wake" the Pi from halt/shutdown state. The **RASPTENDO RESET button** should only be used when really necessary (e.g. *your pi freezed*), as it may corrupt your SD card if the OS is writing on it when you trigger the switch.
+Incidentally it can also be used to "wake" the Pi from halt/shutdown state. The **RASPTENDO RESET button** should only be used when really necessary (e.g. *your pi freezed*), as it may corrupt your SD card if the OS is writing on it when you trigger the button.
 
 <table>
 <tr><th>POWER Button</th><th>RESET Button</th></tr>
@@ -70,7 +70,7 @@ Open your terminal and type the one-line installation command below:
 ```bash
 $ wget -O - "https://raw.githubusercontent.com/Argon40Tech/Super-Rasptendo-Case-Power-Switch/master/install.sh" | sudo bash
 ```
-The script will automatically install pertinent files and configure your Raspberry Pi to enable **RASPTENDO POWER Switch.**
+The script will automatically install pertinent files and configure your Raspberry Pi to enable **RASPTENDO POWER Button.**
 Installation will automatically reboot once all processes are completed.
 
 ### Testing the buttons
