@@ -4,6 +4,7 @@ import os
 from signal import pause
 
 gpioPin = 3 #a Raspberry Pi "wakes up" from a halt state when GPIO3 (pin 5) is shorted to ground (GND)
+rebootPin = 27 #GPIO27 (pin 13) for soft reboot
 hold = 1
 led = LED(14)
 led.on()
@@ -15,9 +16,13 @@ def when_pressed():
   led.blink(.2,.2)
 def when_released():
   led.on()
-
+def reboot(): 
+  os.system("sudo reboot")
+  
 btn = Button(gpioPin, hold_time=hold)
-btn.when_held = halt
+rebootBtn = Button(rebootPin)
+rebootBtn.when_pressed = reboot 
+btn.when_held = halt 
 btn.when_pressed = when_pressed
 btn.when_released = when_released
 pause()
