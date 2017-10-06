@@ -7,36 +7,15 @@
 
 The **RASPTENDO POWER button** safely switches off your Raspberry Pi 3 to avoid corrupting your SD card when you cut off the power supply. The button is programmed to be held for a second before executing the *shutdown* command to prevent accidental power off.
 
-The jumper wires of the **RASPTENDO POWER button** must be connected to *GPIO03 or Pin 5* to "wake" the Raspberry Pi 3 when in halt/shutdown state<a href="#note1"><sup>[1]</sup></a>.
+There are two ways you can mod the **RASPTENDO RESET button**, one for soft reboot and one for hard reset. For more information about choosing the right mod for you, please visit this [page](https://www.rasptendo.com/?p=51).
 
-**There are two options to configure the Rasptendo SNES case:**
-1. *OPTION 1:* Executing a one line bash script in the terminal
-2. *OPTION 2:* Editing configuration files and running a python script on startup in the terminal
+To install the software for your Rasptendo you can choose from the following options.
 
-**Option 1** is the simplest way to install necessary software for your Rasptendo case. The script automatically configures your RetroPie for the **RASPTENDO POWER button** to work.
+**Option 1**: Executing a one line bash script in the terminal
 
-The **RASPTENDO RESET button** works by forcing a restart of your Raspberry pi 3 at any given time. The jumper wires of the **RASPTENDO RESET button** is to be soldered to the *P6 Pins*, which is labeled *RUN* on your Raspberry pi 3 Board, to issue a hardware reset<a href="#note2"><sup>[2]</sup></a>.
+**Option 2**: Editing configuration files and running a python script on startup in the terminal
 
-Incidentally it can also be used to "wake" the Pi from halt/shutdown state. The **RASPTENDO RESET button** should only be used when really necessary (e.g. *your pi freezed*), as it may corrupt your SD card if the OS is writing on it when you trigger the button.
-
-<table>
-<tr><th>POWER Button</th><th>RESET Button</th></tr>
-<tr><td>
-      
-| Current State | Action             | Function               | 
-|---------------|--------------------|------------------------|
-| ON            | long press         | soft shutdown          |
-| ON            | short press (<1 s) | nothing                |
-| SLEEP         | short/long press   | wakes Pi               |
-
-</td><td>
-
-| Current State | Action             | Function               |
-|---------------|--------------------|------------------------|
-| ON            | short/long press   | hard reboot            |
-| SLEEP         | short/long press   | wakes Pi               |
-
-</td></tr> </table>
+**Option 1** is the simplest way to install necessary software for your Rasptendo case. The script automatically configures your RetroPie for the Rasptendo buttons to work.
 
 
 ## Prerequisites
@@ -54,12 +33,12 @@ Incidentally it can also be used to "wake" the Pi from halt/shutdown state. The 
 
 4. Rasptendo SNES Case
 
-      You may purchase from the link [here](https://www.argon40.com "Rasptendo SNES Case").
+      You may purchase from the link [here](https://www.argon40.com/rasptendo/rasptendo-retro-gaming-case.html "Rasptendo SNES Case").
 
 ## Installation
 (**NOTE**: This assumes that you have already connected the jumper wires to the correct PINS and ports.
 It's very important to follow the right pin configuration to prevent damage to your Pi.
-If you haven't, you can follow the instructions [here.](http://www.argon40.com/resources/setting-up-your-rasptendo-case/))
+If you haven't, you can follow the instructions [here.](https://www.rasptendo.com/?p=51))
 
 This instruction is a *step-by-step guide* to install necessary software for your **RASPTENDO Case**.
 You can setup this via SSH or using the command line interface in your RetroPie. To enter the command line interface of RetroPie, *PRESS* ***F4*** just after booting up.
@@ -148,6 +127,4 @@ After rebooting, your **RASPTENDO Case Buttons** are now fully functional. To te
 
 ## Notes
 <a id="note1" href="#note1">[1]</a>: [Wake from halt](https://www.raspberrypi.org/forums/viewtopic.php?f=29&t=24682 "raspberrypi.org")
-
-<a id="note2" href="#note2">[2]</a>: [P6 Pinout - RPi Low Level Peripherals](http://elinux.org/RPi_Low-level_peripherals#P6_header "elinux.org")
 
