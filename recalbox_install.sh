@@ -38,7 +38,7 @@ fi
 #Step 4) Enable Python script to run on start up------------
 DIR=/etc/init.d/S99Rasptendo
 
-if grep -q "python $script \&" "$S99Rasptendo";
+if grep -q "python $script &" "$S99Rasptendo";
 	then
 		if [ -x $DIR];
 			then 
