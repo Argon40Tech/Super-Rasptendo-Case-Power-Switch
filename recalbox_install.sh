@@ -12,11 +12,11 @@ if grep -q "enable_uart=1" "$File";
 		echo "enable_uart=1" >> $File
 		echo "UART enabled."
 fi
-if grep -q "^system.power.switch=PIN56PUSH*" "recalbox.conf";
+if grep -q "^system.power.switch=PIN56PUSH*" "/recalbox/share/system/recalbox.conf";
 	then
 		echo "PIN56PUSH configuration already enabled."
 	else
-		echo "system.power.switch=PIN56PUSH" >> recalbox.conf
+		echo "system.power.switch=PIN56PUSH" >> /recalbox/share/system/recalbox.conf
 		echo "PIN56PUSH configuration enabled."
 fi
 #-----------------------------------------------------------
