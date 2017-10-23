@@ -47,7 +47,7 @@ if grep -q "python $script &" "$S99Rasptendo";
 				chmod +x $DIR
 		fi
 	else
-		echo "python $script \&" >> $DIR
+		echo "python $script m&" >> $DIR
 		chmod +x $DIR
 		echo "Executable S99Rasptendo configured."
 fi
