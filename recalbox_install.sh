@@ -2,7 +2,7 @@
 #Step 1 make /boot writable---------------------------------
 mount -o remount, rw /boot
 
-#Step 2) enable UART----------------------------------------
+#Step 2) enable UART and system.power.switch----------------
 File=/boot/config.txt
 if grep -q "enable_uart=1" "$File";
 	then
@@ -11,7 +11,16 @@ if grep -q "enable_uart=1" "$File";
 		echo "enable_uart=1" >> $File
 		echo "UART enabled."
 fi
+if grep -q "^system.power.switch=PIN56PUSH*" "recalbox.conf";
+	then
+		echo "PIN56PUSH configuration already enabled."
+	else
+		echo "system.power.switch=PIN56PUSH" >> recalbox.conf
+		echo "PIN56PUSH configuration enabled."
+fi
 #-----------------------------------------------------------
+
+
 
 #Step 3) Download Python script-----------------------------
 mkdir /opt/Rasptendo
