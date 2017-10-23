@@ -1,6 +1,7 @@
 #!/bin/bash
 #Step 1 make /boot writable---------------------------------
 mount -o remount, rw /boot
+mount -o remount, rw /
 
 #Step 2) enable UART and system.power.switch----------------
 File=/boot/config.txt
