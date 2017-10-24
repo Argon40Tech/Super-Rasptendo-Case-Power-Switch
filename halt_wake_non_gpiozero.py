@@ -24,7 +24,7 @@ def poweroff():
 		while GPIO.input(powerPin) == GPIO.LOW:
 			hold = time.time() - start
 			if hold >= 1:
-				os.system("poweroff")
+				os.system("shutdown -h now")
 
 #blinks the LED to signal button being pushed
 def ledBlink():
@@ -42,7 +42,7 @@ def ledBlink():
 def reset():
 	while True:
 		GPIO.wait_for_edge(resetPin, GPIO.FALLING)
-		os.system("reboot")
+		os.system("shutdown -r now")
 
 
 if __name__ == "__main__":
