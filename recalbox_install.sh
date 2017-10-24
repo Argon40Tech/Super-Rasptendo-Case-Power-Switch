@@ -31,7 +31,7 @@ if [ -e $script ];
 	then
 		echo "Script halt_wake.py already exists. Doing nothing."
 	else
-		wget -O  $script "https://raw.githubusercontent.com/Argon40Tech/Super-Rasptendo-Case-Power-Switch/master/halt_wake_non_gpiozero.py"
+		wget --no-check-certificate -O  $script "https://raw.githubusercontent.com/Argon40Tech/Super-Rasptendo-Case-Power-Switch/master/halt_wake_non_gpiozero.py"
 fi
 #-----------------------------------------------------------
 
