@@ -56,5 +56,5 @@ fi
 #Step 5) Reboot to apply changes----------------------------
 echo "RASPTENDO SNES Switch installation done. Will now reboot after 3 seconds."
 sleep 3
-reboot
+shutdown -r now
 #-----------------------------------------------------------
