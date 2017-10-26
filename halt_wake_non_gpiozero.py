@@ -34,9 +34,9 @@ def ledBlink():
 		start = time.time()
 		while GPIO.input(powerPin) == GPIO.LOW:
 			GPIO.output(ledPin, GPIO.LOW)
-			time.sleep(0.33)
+			time.sleep(0.2)
 			GPIO.output(ledPin, GPIO.HIGH)
-			time.sleep(0.33)
+			time.sleep(0.2)
 
 #resets the pi
 def reset():
